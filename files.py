@@ -4,15 +4,17 @@ import pandas as pd
 st.subheader("Uploading the CSV file")
 
 df = st.file_uploader("Loading the CSV file:",type=['csv','xlsx'])
-
-df = pd.read_csv("iris.csv")
 if df is not None:
-    st.table(df.head())
+    if df.name.endswith('.csv'):
+        # Save the uploaded file locally
+        with open("temp.csv", "wb") as f:
+            f.write(df.read())
 
+        # Read CSV file
+        data = pd.read_csv("temp.csv")
 
-st.subheader("Dealing with images directly")
-st.image('Ritika.jpeg')
-
+        # Display the DataFrame
+        st.table(data.head())
 
 st.subheader("Working with Images")
 img_file = st.file_uploader("Upload the Image file:",type=['png','jpeg'])
