@@ -10,5 +10,5 @@ https://ritikaxg.streamlit.app/
 3. Plots.py :
    https://ritikaxg-visualization.streamlit.app/
 
-4. PLot.py
+4. Plot.py :
    https://ritikaxg-visualization-with-plotly.streamlit.app/
