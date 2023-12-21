@@ -5,7 +5,7 @@ st.subheader("Uploading the CSV file")
 
 df = st.file_uploader("Loading the CSV file:",type=['csv','xlsx'])
 
-df = pd.read_csv("housing_price.csv")
+df = pd.read_csv("iris.csv")
 if df is not None:
     st.table(df.head())
 
